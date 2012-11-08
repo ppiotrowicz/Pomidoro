@@ -4,11 +4,11 @@ namespace Pomidoro
 {
     public class AppController : NotifyPropertyChangedBase
     {
-        //private readonly TimeSpan WorkDuration = TimeSpan.FromMinutes(25);
-        //private readonly TimeSpan BreakDuration = TimeSpan.FromMinutes(5);
+        private readonly TimeSpan WorkDuration = TimeSpan.FromMinutes(25);
+        private readonly TimeSpan BreakDuration = TimeSpan.FromMinutes(5);
 
-        private readonly TimeSpan WorkDuration = TimeSpan.FromSeconds(10);
-        private readonly TimeSpan BreakDuration = TimeSpan.FromSeconds(5);
+        //private readonly TimeSpan WorkDuration = TimeSpan.FromSeconds(10);
+        //private readonly TimeSpan BreakDuration = TimeSpan.FromSeconds(5);
 
         public AppController()
         {
