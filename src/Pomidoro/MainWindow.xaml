@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="80" Width="100">
     <Window.TaskbarItemInfo>
-        <TaskbarItemInfo ProgressState="Normal" ProgressValue="{Binding Value, Mode=OneWay}" Description="Simple pomodoro timer" />
+        <TaskbarItemInfo ProgressState="Normal" ProgressValue="{Binding CurrentTimer.Value, Mode=OneWay}" Description="Simple pomodoro timer" />
     </Window.TaskbarItemInfo>
     
     <Grid>
-        <TextBlock Text="{Binding RemainingTime, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding CurrentTimer.RemainingTime, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppController.cs" />
     <Compile Include="NotifyPropertyChangedBase.cs" />
     <Compile Include="TimerViewModel.cs" />
     <Page Include="MainWindow.xaml">

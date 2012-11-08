@@ -7,10 +7,10 @@ namespace Pomidoro
     {
         private DispatcherTimer _timer;
 
-        public TimerViewModel()
+        public TimerViewModel(TimeSpan timeBox)
         {
-            TimeBox = TimeSpan.FromMinutes(1.0d);
-            RemainingTime = TimeBox;
+            TimeBox = timeBox;
+            RemainingTime = timeBox;
 
             _timer = new DispatcherTimer
             {
@@ -18,7 +18,6 @@ namespace Pomidoro
             };
 
             _timer.Tick += OnTimerTick;
-            _timer.Start();
         }
 
         private void OnTimerTick(object sender, EventArgs e)
@@ -30,6 +29,7 @@ namespace Pomidoro
             if (RemainingTime == TimeSpan.Zero)
             {
                 _timer.Stop();
+                Finished(this, EventArgs.Empty);
             }
         }
 
@@ -56,5 +56,12 @@ namespace Pomidoro
                 NotifyPropertyChanged("RemainingTime");
             }
         }
+
+        public void Start()
+        {
+            _timer.Start();
+        }
+
+        public event EventHandler Finished = delegate {};
     }
 }

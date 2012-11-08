@@ -10,7 +10,7 @@ namespace Pomidoro
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new TimerViewModel();
+            DataContext = new AppController();
         }
     }
 
