@@ -1,8 +1,12 @@
 ﻿<Window x:Class="Pomidoro.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="80" Width="100">
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo ProgressState="Normal" ProgressValue="{Binding Value, Mode=OneWay}" Description="Simple pomodoro timer" />
     </Window.TaskbarItemInfo>
+    
+    <Grid>
+        <TextBlock Text="{Binding RemainingTime, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
 </Window>

@@ -9,24 +9,27 @@ namespace Pomidoro
 
         public TimerViewModel()
         {
+            TimeBox = TimeSpan.FromMinutes(1.0d);
+            RemainingTime = TimeBox;
+
             _timer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(1.0d),
             };
 
             _timer.Tick += OnTimerTick;
-
-            _timer.IsEnabled = true;
+            _timer.Start();
         }
 
         private void OnTimerTick(object sender, EventArgs e)
         {
-            Value += 0.05d;
+            RemainingTime -= TimeSpan.FromSeconds(1.0d);
 
-            if (Value >= 1.0d)
+            Value = ((TimeBox - RemainingTime).TotalSeconds/TimeBox.TotalSeconds);
+
+            if (RemainingTime == TimeSpan.Zero)
             {
-                //finish
-                _timer.IsEnabled = false;
+                _timer.Stop();
             }
         }
 
@@ -38,6 +41,19 @@ namespace Pomidoro
             {
                 _value = value;
                 NotifyPropertyChanged("Value");
+            }
+        }
+
+        public TimeSpan TimeBox { get; set; }
+
+        private TimeSpan _remainingTime;
+        public TimeSpan RemainingTime
+        {
+            get { return _remainingTime; }
+            set
+            {
+                _remainingTime = value;
+                NotifyPropertyChanged("RemainingTime");
             }
         }
     }
