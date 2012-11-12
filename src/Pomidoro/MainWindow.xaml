@@ -2,8 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="80" Width="100"
-        WindowState="Minimized"
+        WindowState="Normal"
         WindowStyle="None"
+        Topmost="True"
         >
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo ProgressState="Normal" ProgressValue="{Binding CurrentTimer.Value, Mode=OneWay}" Description="Simple pomodoro timer" />
