@@ -5,6 +5,7 @@
         WindowState="Normal"
         WindowStyle="None"
         Topmost="True"
+        MouseDown="Window_MouseDown"
         >
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo ProgressState="Normal" ProgressValue="{Binding CurrentTimer.Value, Mode=OneWay}" Description="Simple pomodoro timer" />
