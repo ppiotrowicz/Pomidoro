@@ -5,6 +5,8 @@
         WindowState="Normal"
         WindowStyle="None"
         Topmost="True"
+        Top="{Binding Top, Mode=TwoWay}"
+        Left="{Binding Left, Mode=TwoWay}"
         MouseDown="Window_MouseDown"
         >
     <Window.TaskbarItemInfo>

@@ -8,10 +8,16 @@ namespace Pomidoro
     /// </summary>
     public partial class MainWindow : Window
     {
+        private AppController _appController;
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new AppController();
+            _appController = new AppController();
+
+            _appController.OnStartup();
+
+            DataContext = _appController;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -21,6 +27,11 @@ namespace Pomidoro
                 this.DragMove();
             }
         }
-    }
 
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            _appController.OnExit();
+            base.OnClosing(e);
+        }
+    }
 }

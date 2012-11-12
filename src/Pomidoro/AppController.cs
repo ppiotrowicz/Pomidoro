@@ -64,5 +64,29 @@ namespace Pomidoro
                 NotifyPropertyChanged("CurrentTimer");
             }
         }
+
+        public int Left { get; set; }
+        public int Top { get; set; }
+
+        protected void SaveCurrentPosition()
+        {
+            // TODO: save current position
+        }
+
+        protected void RestoreCurrentPosition()
+        {
+            Left = 0;
+            Top = 0;
+        }
+
+        public void OnStartup()
+        {
+            RestoreCurrentPosition();
+        }
+
+        public void OnExit()
+        {
+            SaveCurrentPosition();
+        }
     }
 }
