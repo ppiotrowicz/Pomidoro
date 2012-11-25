@@ -13,7 +13,11 @@ namespace Pomidoro
         public MainWindow()
         {
             InitializeComponent();
-            _appController = new AppController();
+            
+            var configuration = new JsonConfiguration();
+            configuration.Load();
+
+            _appController = new AppController(configuration);
 
             _appController.OnStartup();
 
