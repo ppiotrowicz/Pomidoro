@@ -65,7 +65,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppController.cs" />
+    <Compile Include="GlassExtensions.cs" />
     <Compile Include="NotifyPropertyChangedBase.cs" />
+    <Compile Include="PointMatrix.cs" />
     <Compile Include="TimerViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

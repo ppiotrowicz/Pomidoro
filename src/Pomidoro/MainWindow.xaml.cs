@@ -13,6 +13,8 @@ namespace Pomidoro
         public MainWindow()
         {
             InitializeComponent();
+
+            this.GlassBackground();
             
             var configuration = new JsonConfiguration();
             configuration.Load();
