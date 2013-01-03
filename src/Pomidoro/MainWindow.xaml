@@ -14,12 +14,7 @@
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo ProgressState="Normal" ProgressValue="{Binding CurrentTimer.Value, Mode=OneWay}" Description="Simple pomodoro timer" />
     </Window.TaskbarItemInfo>
-    <Grid Background="#80000000">
-        <pomidoro:PointMatrix PointSize="3" Spacing="2" FinishedBrush="Yellow" PendingBrush="Green" Progress="{Binding CurrentTimer.Value, Mode=OneWay}"/>
+    <Grid Background="#40000000">
+        <pomidoro:PointMatrix PointSize="3" Spacing="2" FinishedBrush="#34DBFD" PendingBrush="#80666666" Progress="{Binding CurrentTimer.Value, Mode=OneWay}"/>
     </Grid>
-    <!--<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-        
-        <TextBlock Text="{Binding Mode, Mode=OneWay}" HorizontalAlignment="Center" />
-        <TextBlock Text="{Binding CurrentTimer.RemainingTime, Mode=OneWay}" />
-    </StackPanel>-->
 </Window>
