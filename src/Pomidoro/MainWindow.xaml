@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Pomidoro.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:pomidoro="clr-namespace:Pomidoro"
-        Title="MainWindow" Height="72" Width="72"
+        Title="MainWindow" Height="37" Width="82"
         WindowState="Normal"
         WindowStyle="None"
         ResizeMode="NoResize"
